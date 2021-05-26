@@ -1,7 +1,12 @@
-@extends('layouts.plantillabase')
+@extends('adminlte::page')
 
-@section('contenido')
+@section('title', 'Dashboard')
 
+@section('content_header')
+    <h1>Dashboard</h1>
+@stop
+
+@section('content')
 <form action="/articulos" method="POST">
     @csrf
   <div class="mb-3">
@@ -23,5 +28,12 @@
   <a href="/articulos" class="btn btn-secondary" tabindex="5">Cancelar</a>
   <button type="submit" class="btn btn-primary" tabindex="4">Guardar</button>
 </form>
+@stop
 
-@endsection
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    
+@stop

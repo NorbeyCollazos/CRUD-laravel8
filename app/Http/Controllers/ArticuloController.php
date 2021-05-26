@@ -7,6 +7,11 @@ use App\Models\Articulo;
 
 class ArticuloController extends Controller
 {
+
+    //para que no lo deje acceder si no está logueado
+    public function __construct(){
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *

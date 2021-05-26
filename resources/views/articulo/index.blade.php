@@ -1,11 +1,13 @@
-@extends('layouts.plantillabase')
+@extends('adminlte::page')
 
-@section('css')
-<link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css" rel="styleshed">
-@endsection
+@section('title', 'Dashboard')
 
-@section('contenido')
+@section('content_header')
+    <h1>Dashboard</h1>
+    
+@stop
 
+@section('content')
 <a href="articulos/create" class="btn btn-primary mb-3">Crear</a>
 
 <table id="articulos" class="table table-striped">
@@ -43,6 +45,14 @@
     </tbody>
 </table>
 
+
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+    <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css" rel="styleshed">
+@stop
+
 @section('js')
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
@@ -55,7 +65,10 @@
         });
     });
 </script>
-@endsection
+@stop
 
 
-@endsection
+
+
+
+
